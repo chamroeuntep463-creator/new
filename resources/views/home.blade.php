@@ -92,10 +92,10 @@
                     </div>
 
                     <!-- 6. Floating Badge 1 (Top Right: Laravel & PHP) -->
-                    <div class="absolute -top-3 -right-3 sm:-right-6 glass-panel px-3.5 py-2 rounded-2xl shadow-[0_0_30px_rgba(6,182,212,0.35)] border border-cyan-500/40 animate-float flex items-center gap-2.5 backdrop-blur-xl hover:scale-105 transition-transform">
-                        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 p-[1px] shadow-md shadow-red-500/30">
-                            <div class="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center text-red-500">
-                                <x-icons.laravel class="w-4 h-4 text-red-500" />
+                    <div class="absolute -top-3 -right-3 sm:-right-6 glass-panel px-3.5 py-2 rounded-2xl shadow-[0_0_30px_rgba(255,45,32,0.3)] border border-[#FF2D20]/40 animate-float flex items-center gap-2.5 backdrop-blur-xl hover:scale-105 transition-transform">
+                        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-[#FF2D20] to-rose-600 p-[1px] shadow-md shadow-[#FF2D20]/30">
+                            <div class="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center text-[#FF2D20]">
+                                <x-icons.laravel class="w-5 h-5 text-[#FF2D20]" />
                             </div>
                         </div>
                         <div>
@@ -106,15 +106,15 @@
 
 
                     <!-- 7. Floating Badge 2 (Bottom Left: Livewire & Alpine) -->
-                    <div class="absolute -bottom-4 -left-3 sm:-left-6 glass-panel px-3.5 py-2 rounded-2xl shadow-[0_0_30px_rgba(168,85,247,0.35)] border border-purple-500/40 animate-float-slow flex items-center gap-2.5 backdrop-blur-xl hover:scale-105 transition-transform">
-                        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-500 to-indigo-600 p-[1px] shadow-md shadow-purple-500/30">
-                            <div class="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center text-purple-400">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <div class="absolute -bottom-4 -left-3 sm:-left-6 glass-panel px-3.5 py-2 rounded-2xl shadow-[0_0_30px_rgba(251,112,169,0.3)] border border-[#FB70A9]/40 animate-float-slow flex items-center gap-2.5 backdrop-blur-xl hover:scale-105 transition-transform">
+                        <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-[#FB70A9] to-purple-600 p-[1px] shadow-md shadow-[#FB70A9]/30">
+                            <div class="w-full h-full bg-slate-950 rounded-[11px] flex items-center justify-center">
+                                <x-icons.livewire class="w-5 h-5" />
                             </div>
                         </div>
                         <div>
                             <span class="block text-xs font-bold text-white tracking-tight">Livewire 3</span>
-                            <span class="block text-[9px] text-purple-400 font-mono">Reactive Engine</span>
+                            <span class="block text-[9px] text-pink-400 font-mono">Reactive Engine</span>
                         </div>
                     </div>
 
@@ -399,10 +399,15 @@
             </div>
 
             <!-- 9. Laravel (Backend) -->
-            <div x-show="activeTab === 'all' || activeTab === 'backend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-red-500/50 hover:shadow-[0_0_25px_rgba(239,68,68,0.2)] transition-all duration-300 group">
+            <div x-show="activeTab === 'all' || activeTab === 'backend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-[#FF2D20]/50 hover:shadow-[0_0_25px_rgba(255,45,32,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform">
-                        <x-icons.laravel class="w-6 h-6 text-red-500" />
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-12 h-12 rounded-xl bg-[#FF2D20]/10 border border-[#FF2D20]/30 flex items-center justify-center text-[#FF2D20] group-hover:scale-110 transition-transform">
+                            <x-icons.laravel class="w-6 h-6 text-[#FF2D20]" />
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-[#FB70A9]/10 border border-[#FB70A9]/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <x-icons.livewire class="w-6 h-6" />
+                        </div>
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-red-950/60 text-red-400 border border-red-500/30">Backend</span>
                 </div>
@@ -562,10 +567,10 @@
             </div>
 
             <!-- Service 2: Laravel Development -->
-            <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-red-500/50 hover:shadow-[0_0_35px_rgba(239,68,68,0.25)] transition-all duration-300 group flex flex-col justify-between space-y-6">
+            <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-[#FF2D20]/50 hover:shadow-[0_0_35px_rgba(255,45,32,0.25)] transition-all duration-300 group flex flex-col justify-between space-y-6">
                 <div class="space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/30 text-red-500 flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <x-icons.laravel class="w-7 h-7 text-red-500" />
+                    <div class="w-14 h-14 rounded-2xl bg-[#FF2D20]/10 border border-[#FF2D20]/30 text-[#FF2D20] flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <x-icons.laravel class="w-7 h-7 text-[#FF2D20]" />
                     </div>
                     <h3 class="text-xl font-bold text-white group-hover:text-red-300 transition-colors">Laravel Development</h3>
                     <p class="text-sm text-slate-300 leading-relaxed">
