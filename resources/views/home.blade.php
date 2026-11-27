@@ -397,7 +397,7 @@
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-indigo-950/60 text-indigo-400 border border-indigo-500/30">Backend</span>
                 </div>
-                <h4 class="text-lg font-bold text-white mb-1.5">PHP 8.3+</h4>
+                <h4 class="text-lg font-bold text-white mb-1.5">PHP 8.6</h4>
                 <p class="text-xs text-slate-400 leading-relaxed">Modern object-oriented programming, strict typing, attributes, enums, and high-speed execution.</p>
             </div>
 

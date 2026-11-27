@@ -67,7 +67,7 @@
             <div class="space-y-5">
                 <div>
                     <div class="flex justify-between mb-1 text-sm font-mono">
-                        <span class="text-slate-200">Laravel 13 & PHP 8.3</span>
+                        <span class="text-slate-200">Laravel 13 & PHP 8.6</span>
                         <span class="text-cyan-400 font-bold">96%</span>
                     </div>
                     <div class="w-full bg-slate-950 rounded-full h-2.5 p-0.5 border border-slate-800">
