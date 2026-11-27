@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initAnimatedCounters();
     initSpotlightEffect();
+    initHeroTypewriter();
 });
 
 // Re-init on Livewire navigate if enabled
@@ -12,6 +13,7 @@ document.addEventListener('livewire:navigated', () => {
     initParticles();
     initAnimatedCounters();
     initSpotlightEffect();
+    initHeroTypewriter();
 });
 
 function initParticles() {
@@ -170,5 +172,50 @@ function initSpotlightEffect() {
             card.style.setProperty('--mouse-x', `${x}px`);
             card.style.setProperty('--mouse-y', `${y}px`);
         });
+    });
+}
+
+function initHeroTypewriter() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
+    const elements = document.querySelectorAll('[data-typewriter]');
+    elements.forEach((el) => {
+        if (el.dataset.typewriterInitialized === 'true') return;
+        el.dataset.typewriterInitialized = 'true';
+
+        const fullText = el.getAttribute('data-typewriter') || el.textContent.trim();
+        const chars = Array.from(fullText);
+        let index = chars.length;
+        let isDeleting = true;
+
+        function step() {
+            if (!document.body.contains(el)) return;
+
+            if (isDeleting) {
+                index--;
+                el.textContent = index > 0 ? chars.slice(0, index).join('') : '\u200B';
+
+                if (index <= 0) {
+                    isDeleting = false;
+                    setTimeout(step, 350);
+                } else {
+                    setTimeout(step, 110);
+                }
+            } else {
+                index++;
+                el.textContent = chars.slice(0, index).join('');
+
+                if (index >= chars.length) {
+                    isDeleting = true;
+                    setTimeout(step, 1800);
+                } else {
+                    setTimeout(step, 140);
+                }
+            }
+        }
+
+        setTimeout(step, 1200);
     });
 }

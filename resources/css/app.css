@@ -12,6 +12,12 @@
     --color-cyber-dark: #07090e;
     --color-cyber-card: #0d131f;
     --color-cyber-border: rgba(56, 189, 248, 0.15);
+
+    --animate-fade-in-up: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    --animate-gradient-x: gradientX 4s linear infinite;
+    --animate-typing: typingReveal 6s steps(24, end) infinite;
+    --animate-cursor-blink: cursorBlink 0.75s step-end infinite;
+    --animate-hello-glow: helloGlow 3s ease-in-out infinite;
 }
 
 /* Custom Neon & Glassmorphism Utilities */
@@ -148,6 +154,73 @@
 
 .animate-shimmer {
     animation: shimmerSweep 4.5s ease-in-out infinite;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientX {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+@keyframes typingReveal {
+    0%, 4% {
+        max-width: 0;
+    }
+    45%, 82% {
+        max-width: 24ch;
+    }
+    96%, 100% {
+        max-width: 0;
+    }
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes helloGlow {
+    0%, 100% {
+        opacity: 0.8;
+        text-shadow: 0 0 8px rgba(34, 211, 238, 0.25);
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 18px rgba(34, 211, 238, 0.75);
+        transform: translateX(4px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-up,
+    .animate-gradient-x,
+    .animate-typing,
+    .animate-cursor-blink,
+    .animate-hello-glow {
+        animation: none !important;
+        max-width: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
 }
 
 

@@ -24,20 +24,23 @@
 
                 <!-- Main Greeting & Name with Neon Gradient -->
                 <div class="space-y-2">
-                    <p class="text-slate-400 font-mono text-base sm:text-lg">
-                        &lt;hello_world&gt;
+                    <p class="text-cyan-400/90 font-mono text-base sm:text-lg animate-fade-in-up">
+                        <span class="inline-block animate-hello-glow">&lt;hello_world&gt;</span>
                     </p>
-                    <h1 class="text-4xl sm:text-6xl xl:text-7xl font-extrabold text-white tracking-tight leading-tight">
-                        Hi, I'm <br class="hidden sm:inline" />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-purple-400 drop-shadow-[0_0_25px_rgba(6,182,212,0.4)]">
-                            Chamroeun
+                    <h1 class="text-4xl sm:text-6xl xl:text-7xl font-extrabold text-white tracking-tight leading-tight animate-fade-in-up [animation-delay:150ms]">
+                        <span class="block transition-transform duration-300 hover:translate-x-1">Hi, I'm</span>
+                        <span class="inline-flex items-center">
+                            <span
+                                data-typewriter="Chamroeun"
+                                class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-[length:200%_auto] animate-gradient-x drop-shadow-[0_0_25px_rgba(6,182,212,0.45)]"
+                            >Chamroeun</span><span class="inline-block w-[3px] sm:w-1 h-[0.82em] bg-cyan-400 ml-1.5 rounded-full animate-cursor-blink shadow-[0_0_12px_rgba(34,211,238,0.9)]" aria-hidden="true"></span>
                         </span>
                     </h1>
-                    <div class="flex items-center justify-center lg:justify-start gap-2 pt-2">
+                    <div class="flex items-center justify-center lg:justify-start gap-1.5 pt-2 animate-fade-in-up [animation-delay:300ms]">
                         <span class="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-200">
                             Full Stack Web Developer
                         </span>
-                        <span class="text-cyan-400 text-2xl animate-pulse font-mono">_</span>
+                        <span class="text-cyan-400 text-2xl sm:text-3xl animate-cursor-blink font-mono font-bold drop-shadow-[0_0_10px_rgba(34,211,238,0.8)]">_</span>
                     </div>
                 </div>
 
@@ -306,7 +309,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'frontend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-orange-500/50 hover:shadow-[0_0_25px_rgba(249,115,22,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
-                        <span class="font-mono font-bold text-lg">&lt;/&gt;</span>
+                        <x-icons.html5 class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-orange-950/60 text-orange-400 border border-orange-500/30">Frontend</span>
                 </div>
@@ -318,7 +321,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'frontend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-blue-500/50 hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
-                        <span class="font-mono font-bold text-lg">#{}</span>
+                        <x-icons.css3 class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-blue-950/60 text-blue-400 border border-blue-500/30">Frontend</span>
                 </div>
@@ -330,7 +333,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'frontend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/50 hover:shadow-[0_0_25px_rgba(6,182,212,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>
+                        <x-icons.tailwindcss class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-cyan-950/60 text-cyan-400 border border-cyan-500/30">Frontend</span>
                 </div>
@@ -342,7 +345,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'frontend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 hover:shadow-[0_0_25px_rgba(168,85,247,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-lg font-mono">B</span>
+                        <x-icons.bootstrap class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-purple-950/60 text-purple-400 border border-purple-500/30">Frontend</span>
                 </div>
@@ -354,7 +357,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'frontend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-yellow-500/50 hover:shadow-[0_0_25px_rgba(234,179,8,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">JS</span>
+                        <x-icons.javascript class="w-6 h-6 rounded-[3px]" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-yellow-950/60 text-yellow-400 border border-yellow-500/30">Frontend</span>
                 </div>
@@ -366,7 +369,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'frontend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-sky-500/50 hover:shadow-[0_0_25px_rgba(14,165,233,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">TS</span>
+                        <x-icons.typescript class="w-6 h-6 rounded-[3px]" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-sky-950/60 text-sky-400 border border-sky-500/30">Frontend</span>
                 </div>
@@ -378,7 +381,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'frontend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-teal-500/50 hover:shadow-[0_0_25px_rgba(20,184,166,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">ALP</span>
+                        <x-icons.alpinejs class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-teal-950/60 text-teal-400 border border-teal-500/30">Frontend</span>
                 </div>
@@ -390,7 +393,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'backend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-indigo-500/50 hover:shadow-[0_0_25px_rgba(99,102,241,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">PHP</span>
+                        <x-icons.php class="w-8 h-8" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-indigo-950/60 text-indigo-400 border border-indigo-500/30">Backend</span>
                 </div>
@@ -420,7 +423,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'backend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-green-500/50 hover:shadow-[0_0_25px_rgba(34,197,94,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/30 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">NODE</span>
+                        <x-icons.nodejs class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-green-950/60 text-green-400 border border-green-500/30">Backend</span>
                 </div>
@@ -431,8 +434,8 @@
             <!-- 11. Express.js (Backend) -->
             <div x-show="activeTab === 'all' || activeTab === 'backend'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-slate-400/50 hover:shadow-[0_0_25px_rgba(148,163,184,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 rounded-xl bg-slate-500/10 border border-slate-500/30 flex items-center justify-center text-slate-300 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">EX</span>
+                    <div class="w-12 h-12 rounded-xl bg-slate-500/10 border border-slate-500/30 flex items-center justify-center text-slate-100 group-hover:scale-110 transition-transform">
+                        <x-icons.express class="w-7 h-7 text-slate-100" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-slate-900/60 text-slate-400 border border-slate-500/30">Backend</span>
                 </div>
@@ -444,7 +447,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'database'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-sky-500/50 hover:shadow-[0_0_25px_rgba(14,165,233,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                        <x-icons.mysql class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-sky-950/60 text-sky-400 border border-sky-500/30">Database</span>
                 </div>
@@ -456,7 +459,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'database'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-blue-500/50 hover:shadow-[0_0_25px_rgba(59,130,246,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">PG</span>
+                        <x-icons.postgresql class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-blue-950/60 text-blue-400 border border-blue-500/30">Database</span>
                 </div>
@@ -468,7 +471,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'database'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-emerald-500/50 hover:shadow-[0_0_25px_rgba(16,185,129,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">MGO</span>
+                        <x-icons.mongodb class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-emerald-950/60 text-emerald-400 border border-emerald-500/30">Database</span>
                 </div>
@@ -479,8 +482,13 @@
             <!-- 15. Git & GitHub (Tools) -->
             <div x-show="activeTab === 'all' || activeTab === 'tools'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-orange-500/50 hover:shadow-[0_0_25px_rgba(249,115,22,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">GIT</span>
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform">
+                            <x-icons.git class="w-6 h-6" />
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-slate-500/10 border border-slate-500/30 flex items-center justify-center text-slate-100 group-hover:scale-110 transition-transform">
+                            <x-icons.github class="w-6 h-6 text-slate-100" />
+                        </div>
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-orange-950/60 text-orange-400 border border-orange-500/30">DevOps</span>
                 </div>
@@ -492,7 +500,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'tools'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-cyan-500/50 hover:shadow-[0_0_25px_rgba(6,182,212,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">DKR</span>
+                        <x-icons.docker class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-cyan-950/60 text-cyan-400 border border-cyan-500/30">DevOps</span>
                 </div>
@@ -503,8 +511,13 @@
             <!-- 17. Linux & Nginx (Tools) -->
             <div x-show="activeTab === 'all' || activeTab === 'tools'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-green-500/50 hover:shadow-[0_0_25px_rgba(34,197,94,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
-                    <div class="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/30 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">NGX</span>
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <x-icons.linux class="w-7 h-7" />
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/30 flex items-center justify-center text-green-400 group-hover:scale-110 transition-transform">
+                            <x-icons.nginx class="w-6 h-6" />
+                        </div>
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-green-950/60 text-green-400 border border-green-500/30">DevOps</span>
                 </div>
@@ -516,7 +529,7 @@
             <div x-show="activeTab === 'all' || activeTab === 'tools'" x-transition class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-amber-500/50 hover:shadow-[0_0_25px_rgba(245,158,11,0.2)] transition-all duration-300 group">
                 <div class="flex items-center justify-between mb-4">
                     <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
-                        <span class="font-bold text-base font-mono">CF</span>
+                        <x-icons.cloudflare class="w-7 h-7" />
                     </div>
                     <span class="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-amber-950/60 text-amber-400 border border-amber-500/30">DevOps</span>
                 </div>
@@ -713,7 +726,7 @@
                     <!-- Details Content -->
                     <div class="p-6 sm:p-8 space-y-4">
                         <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
-                            <a href="https://sys-shop.vercel.app/" target="_blank" rel="noopener noreferrer" class="hover:underline inline-flex items-center gap-2">
+                            <a href="https://ppt3.site/" target="_blank" rel="noopener noreferrer" class="hover:underline inline-flex items-center gap-2">
                                 Admin Dashboard & PPT3
                                 <svg class="w-4 h-4 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                             </a>
@@ -733,7 +746,7 @@
 
                 <!-- Footer Buttons -->
                 <div class="p-6 sm:p-8 pt-0 flex items-center gap-4">
-                    <a href="https://sys-shop.vercel.app/" class="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold rounded-xl text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition">
+                    <a href="https://ppt3.site/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-bold rounded-xl text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] transition">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                         Live Demo
                     </a>
